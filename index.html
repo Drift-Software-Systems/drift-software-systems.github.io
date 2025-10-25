@@ -29,18 +29,98 @@
     <link rel="apple-touch-icon" sizes="120x120" href="./assets/img/drift_logo.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/drift_logo.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/drift_logo.png">
-    <link rel="manifest" href="./assets/img/favicon/site.webmanifest">
-    <link rel="mask-icon" href="./assets/img/drift_logo.png" color="#ffffff">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
 
-    <!-- Fontawesome -->
-    <link type="text/css" href="./vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
-    <!-- Swipe CSS -->
+    <!-- Swipe CSS (if you have this hosted, otherwise will need to be replaced with custom styles) -->
     <link type="text/css" href="./css/swipe.css" rel="stylesheet">
 
     <style>
+        /* Basic navbar styles */
+        .navbar-brand img {
+            height: 40px;
+        }
+        
+        .navbar-theme-primary {
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-theme-secondary .navbar-nav .nav-link {
+            color: #1a1a1a;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+        }
+        
+        .navbar-theme-secondary .navbar-nav .nav-link:hover {
+            color: #11278c;
+        }
+
+        /* Hero section */
+        .section-header {
+            padding: 100px 0 80px;
+        }
+
+        /* Feature cards */
+        .card {
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .icon-lg {
+            width: 60px;
+            height: 60px;
+            font-size: 24px;
+        }
+        
+        .icon-primary {
+            color: #11278c;
+            background: rgba(17, 39, 140, 0.1);
+            border-radius: 12px;
+        }
+
+        /* Buttons */
+        .btn-dark {
+            background: #1a1a1a;
+            border-color: #1a1a1a;
+            color: #fff;
+        }
+        
+        .btn-dark:hover {
+            background: #11278c;
+            border-color: #11278c;
+        }
+        
+        .btn-outline-dark {
+            border-color: #1a1a1a;
+            color: #1a1a1a;
+        }
+        
+        .btn-outline-dark:hover {
+            background: #1a1a1a;
+            color: #fff;
+        }
+        
+        .btn-outline-soft {
+            border: 2px solid rgba(0,0,0,0.1);
+            color: #1a1a1a;
+        }
+
         /* Surf AI Showcase Section Styles */
         .surf-showcase {
             background: #11278c;
@@ -71,7 +151,7 @@
         }
 
         .chat-header {
-            background:  #11278c;
+            background: #11278c;
             color: white;
             padding: 20px 15px 15px;
             display: flex;
@@ -171,6 +251,57 @@
         .message:nth-child(2) { animation-delay: 1.5s; }
         .message:nth-child(3) { animation-delay: 3s; }
         .message:nth-child(4) { animation-delay: 4.8s; }
+
+        /* Footer */
+        .footer {
+            background: #f8f9fa;
+        }
+        
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-links a {
+            color: #6c757d;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            color: #11278c;
+        }
+
+        /* Sections */
+        .section {
+            padding: 60px 0;
+        }
+        
+        .section-lg {
+            padding: 80px 0;
+        }
+        
+        .bg-soft {
+            background-color: #f8f9fa;
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Accordion */
+        .accordion .btn-link {
+            color: #1a1a1a;
+            text-decoration: none;
+        }
+        
+        .accordion .btn-link:hover {
+            color: #11278c;
+        }
     </style>
 </head>
 
@@ -180,22 +311,12 @@
             <div class="container position-relative">
                 <a class="navbar-brand mr-lg-4" href="./index.html">
                     <img class="navbar-brand-dark" src="./assets/img/drift_logo.png" alt="Drift Logo">
-                    <img class="navbar-brand-light" src="./assets/img/drift_logo.png" alt="Drift Logo">
                 </a>
+                <button class="navbar-toggler ml-2" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
                 <div class="navbar-collapse collapse mr-auto" id="navbar_global">
-                    <div class="navbar-collapse-header">
-                        <div class="row">
-                            <div class="col-6 collapse-brand">
-                                <a href="./index.html">
-                                    <img src="./assets/img/drift_logo.png" alt="Drift Logo">
-                                </a>
-                            </div>
-                            <div class="col-6 collapse-close">
-                                <a href="#navbar_global" class="fas fa-times" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" title="close" aria-label="Toggle navigation"></a>
-                            </div>
-                        </div>
-                    </div>
-                    <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
+                    <ul class="navbar-nav navbar-nav-hover align-items-lg-center ml-auto">
                         <li class="nav-item">
                             <a href="#about" class="nav-link">About</a>
                         </li>
@@ -211,10 +332,7 @@
                     </ul>
                 </div>
                 <div class="d-flex align-items-center">
-                    <a href="https://web.driftnet.live" target="_blank" class="btn btn-outline-soft d-none d-md-inline mr-md-3 animate-up-2">Try Drift Web</a>
-                    <button class="navbar-toggler ml-2" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+                    <a href="https://web.driftnet.live" target="_blank" class="btn btn-outline-soft d-none d-md-inline mr-md-3">Try Drift Web</a>
                 </div>
             </div>
         </nav>
@@ -231,7 +349,7 @@
                         </h1>
                         <p class="lead mb-4 mb-lg-5">Drift connects international students, travelers, and workers with their home communities. Find people nearby from your country, join global interest groups, and get instant help from Surf AI—your personal assistant that understands where you're from.</p>
                         <div>
-                            <a href="#" class="btn btn-dark btn-download-app mb-xl-0 mr-2 mr-md-3">
+                            <a href="#" class="btn btn-dark btn-download-app mb-3 mb-xl-0 mr-2 mr-md-3">
                                 <span class="d-flex align-items-center">
                                     <span class="icon icon-brand mr-2 mr-md-3"><span class="fab fa-apple"></span></span>
                                     <span class="d-inline-block text-left">
@@ -239,7 +357,7 @@
                                     </span> 
                                 </span>
                             </a>
-                            <a href="https://play.google.com/store/apps/details?id=com.driftdevs.drift" class="btn btn-dark btn-download-app mb-xl-0 mr-2 mr-md-3">
+                            <a href="https://play.google.com/store/apps/details?id=com.driftdevs.drift" class="btn btn-dark btn-download-app mb-3 mb-xl-0 mr-2 mr-md-3">
                                 <span class="d-flex align-items-center">
                                     <span class="icon icon-brand mr-2 mr-md-3"><span class="fab fa-google-play"></span></span>
                                     <span class="d-inline-block text-left">
@@ -247,7 +365,7 @@
                                     </span> 
                                 </span>
                             </a>
-                            <a href="https://web.driftnet.live" class="btn btn-dark btn-download-app mb-xl-0 mr-2 mr-md-3">
+                            <a href="https://web.driftnet.live" class="btn btn-dark btn-download-app mb-3 mb-xl-0 mr-2 mr-md-3">
                                 <span class="d-flex align-items-center">
                                     <span class="icon icon-brand mr-2 mr-md-3"><span class="fas fa-globe"></span></span>
                                     <span class="d-inline-block text-left">
@@ -258,7 +376,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-md-10 justify-content-center">
-                        <img class="d-none d-md-inline-block" src="./assets/img/illustrations/scene.svg" alt="Drift Mobile App Illustration">
+                        <img class="d-none d-md-inline-block w-100" src="./assets/img/illustrations/scene.svg" alt="Drift Mobile App Illustration">
                     </div>
                 </div>
             </div>
@@ -325,7 +443,7 @@
                         <h2 class="mb-4">Stay Connected, Wherever You Go</h2>
                         <p>Drift helps you find your community instantly. Connect with people from your hometown, join subcommunities exclusive to your country, and follow news that matters back home.</p>
                         <p>With location-based discovery, you can find and chat with people from your state or country who are within 10 miles- turning strangers into friends in unfamiliar places.</p>
-                        <a href="https://web.driftnet.live" class="btn btn-dark mt-3 animate-up-2">
+                        <a href="https://web.driftnet.live" class="btn btn-dark mt-3">
                             Try Drift Now
                             <span class="icon icon-xs ml-2">
                                 <i class="fas fa-external-link-alt"></i>
@@ -341,7 +459,7 @@
                         <h2 class="mb-4">Drift for Your Organization</h2>
                         <p>Customize Drift Enterprise for your school, company, or organization. From training Surf AI on frequently asked questions to creating approved channels and groups—every feature helps your people connect and thrive.</p>
                         <p>Perfect for universities supporting international students, companies with global teams, events, or religious organizations. Get Drift Enterprise set up in less than 7 days with full admin control and member privacy.</p>
-                        <a href="mailto:driftsuggestions@gmail.com?subject=Drift%20Enterprise%20Inquiry" class="btn btn-dark mt-3 animate-up-2">
+                        <a href="mailto:driftsuggestions@gmail.com?subject=Drift%20Enterprise%20Inquiry" class="btn btn-dark mt-3">
                             Contact Us
                             <span class="icon icon-xs ml-2">
                                 <i class="fas fa-external-link-alt"></i>
@@ -391,8 +509,7 @@
                 </div>
                 <div class="row text-center">
                     <div class="col d-flex justify-content-center flex-wrap">
-                        <a href="#" aria-label="Founder University" class="icon icon-xl icon-dark mx-auto"
-                        data-toggle="tooltip" data-placement="top" title="Founder University">
+                        <a href="#" aria-label="Founder University" class="icon icon-xl icon-dark mx-auto">
                             <img src="assets/img/clients/FounderUniversityLogo.webp" class="mx-auto d-block" style="max-width: 120px; max-height: 120px;" alt="Founder University Logo">
                         </a>
                     </div>
@@ -616,11 +733,6 @@
 
         <!-- Download Section -->
         <div class="section bg-soft" id="download">
-            <figure class="position-absolute top-0 left-0 w-100 d-none d-md-block mt-n3">
-                <svg class="fill-soft" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1920 43.4" style="enable-background:new 0 0 1920 43.4;" xml:space="preserve">
-                   <path d="M0,23.3c0,0,405.1-43.5,697.6,0c316.5,1.5,108.9-2.6,480.4-14.1c0,0,139-12.2,458.7,14.3 c0,0,67.8,19.2,283.3-22.7v35.1H0V23.3z"></path>
-                </svg>
-            </figure>
             <div class="container">
                 <div class="row row-grid align-items-center">
                     <div class="col-12 col-lg-6">
@@ -628,7 +740,7 @@
                         <h2 class="display-3 mb-4">Get Started in Seconds</h2>
                         <p class="lead text-muted">Download Drift and instantly connect with people from home. Join global communities, discover people nearby from your country, and chat with Surf AI—your personal assistant who understands where you're from.</p>
                         <div class="mt-4 mt-lg-5">
-                            <a href="#" class="btn btn-dark btn-download-app mb-xl-0 mr-2 mr-md-3">
+                            <a href="#" class="btn btn-dark btn-download-app mb-3 mb-xl-0 mr-2 mr-md-3">
                                 <span class="d-flex align-items-center">
                                     <span class="icon icon-brand mr-2 mr-md-3"><span class="fab fa-apple"></span></span>
                                     <span class="d-inline-block text-left">
@@ -657,7 +769,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-lg-5 ml-lg-auto">
-                        <img class="d-none d-lg-inline-block" src="./assets/img/illustrations/scene-3.svg" alt="Drift Mobile App Download Illustration">
+                        <img class="d-none d-lg-inline-block w-100" src="./assets/img/illustrations/scene-3.svg" alt="Drift Mobile App Download Illustration">
                     </div>
                 </div>
             </div>
@@ -665,11 +777,6 @@
     </main>
 
     <footer class="footer py-5 pt-lg-6">
-        <div class="sticky-right">
-            <a href="#home" class="icon icon-primary icon-md btn btn-icon-only btn-white border border-soft shadow-soft animate-up-3">
-                <span class="fas fa-chevron-up"></span>
-            </a>
-        </div>
         <div class="container">
             <div class="row justify-content-between">
                 <div class="col-md-4">
@@ -708,21 +815,31 @@
         </div>
     </footer>
 
-    <!-- Core -->
-    <script src="./vendor/popper.js/dist/umd/popper.min.js"></script>
-    <script src="./vendor/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="./vendor/headroom.js/dist/headroom.min.js"></script>
-
-    <!-- Vendor JS -->
-    <script src="./vendor/onscreen/dist/on-screen.umd.min.js"></script>
-    <script src="./vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
-
-    <!-- Swipe JS -->
-    <script src="./assets/js/swipe.js"></script>
+    <!-- jQuery (required for Bootstrap JS) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <!-- Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Headroom.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.12.0/headroom.min.js"></script>
 
     <script>
         // Update current year
         document.querySelector('.current-year').textContent = new Date().getFullYear();
+        
+        // Initialize Headroom for navbar
+        const navbar = document.querySelector('#navbar-main');
+        if (navbar) {
+            const headroom = new Headroom(navbar, {
+                offset: 100,
+                tolerance: {
+                    up: 10,
+                    down: 10
+                }
+            });
+            headroom.init();
+        }
     </script>
 </body>
 </html>
