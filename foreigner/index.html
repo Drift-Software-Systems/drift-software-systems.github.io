@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drift Survey - Foreigners</title>
+    <link rel="stylesheet" href="../css/survey.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="survey-header">
+            <h1>Drift Market Research Survey - For People Living Away from Home</h1>
+            <p class="survey-intro">Drift (driftnet.live) is a social network that helps foreigners and people living
+                away from home connect with others from their region, get language support, and find community. We'd
+                love your feedback!</p>
+        </div>
+
+        <form class="survey-form" id="foreignerSurvey">
+
+            <!-- Section 1: Your Situation -->
+            <div class="survey-section">
+                <h2>About Your Experience Abroad</h2>
+
+                <div class="form-group">
+                    <label>How long have you been living outside your home country/state?</label>
+                    <select name="timeAbroad" required>
+                        <option value="">Select duration</option>
+                        <option value="0-6">Less than 6 months</option>
+                        <option value="6-12">6 months - 1 year</option>
+                        <option value="1-2">1-2 years</option>
+                        <option value="2-5">2-5 years</option>
+                        <option value="5+">5+ years</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>What is your main reason for being away from home?</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="reason" value="work" required>
+                            <span>Work/Employment</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="reason" value="study">
+                            <span>Study/Education</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="reason" value="family">
+                            <span>Family reasons</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="reason" value="lifestyle">
+                            <span>Lifestyle/Personal choice</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="reason" value=" other">
+                            <span>Other</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 2: Challenges Faced -->
+            <div class="survey-section">
+                <h2>Challenges You're Experiencing</h2>
+
+                <div class="form-group">
+                    <label>What challenges do you face living away from home? (Select all that apply)</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="challenges" value="isolation">
+                            <span>Feelings of isolation and homesickness</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="challenges" value="language">
+                            <span>Language barriers</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="challenges" value="cultural">
+                            <span>Adjusting to new culture</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="challenges" value="finding-people">
+                            <span>Finding people from my home region</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="challenges" value="local-info">
+                            <span>Finding local services/information</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="challenges" value="making-friends">
+                            <span>Making friends and connections</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="challenges" value="none">
+                            <span>No challenges - Adjusting well</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Rate how difficult adjusting to your new location has been</label>
+                    <div class="rating-stars">
+                        <input type="radio" name="adjustmentDifficulty" value="5" id="adj5" required>
+                        <label for="adj5">★</label>
+                        <input type="radio" name="adjustmentDifficulty" value="4" id="adj4">
+                        <label for="adj4">★</label>
+                        <input type="radio" name="adjustmentDifficulty" value="3" id="adj3">
+                        <label for="adj3">★</label>
+                        <input type="radio" name="adjustmentDifficulty" value="2" id="adj2">
+                        <label for="adj2">★</label>
+                        <input type="radio" name="adjustmentDifficulty" value="1" id="adj1">
+                        <label for="adj1">★</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>How often do you feel homesick?</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="homesickness" value="very-often" required>
+                            <span>Very often (daily/almost daily)</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="homesickness" value="often">
+                            <span>Often (few times a week)</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="homesickness" value="sometimes">
+                            <span>Sometimes</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="homesickness" value="rarely">
+                            <span>Rarely</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="homesickness" value="never">
+                            <span>Never</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Have you been able to find people from your home region nearby?</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="foundCompatriots" value="yes-easy" required>
+                            <span>Yes, found them easily</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="foundCompatriots" value="yes-hard">
+                            <span>Yes, but it was difficult</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="foundCompatriots" value="still-looking">
+                            <span>No, still looking</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="foundCompatriots" value="gave-up">
+                            <span>No, gave up trying</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="foundCompatriots" value="not-interested">
+                            <span>Haven't tried/not interested</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 3: Interest in Drift Features -->
+            <div class="survey-section">
+                <h2>How Drift Could Help You</h2>
+
+                <div class="form-group">
+                    <label>Rate your interest in these Drift features (1 = Not interested, 5 = Very interested)</label>
+                    <div class="rating-grid">
+                        <div class="rating-row">
+                            <span class="rating-label">Location-based discovery: Find people from your home region
+                                nearby</span>
+                            <div class="rating-scale">
+                                <label><input type="radio" name="feature-location" value="1" required> 1</label>
+                                <label><input type="radio" name="feature-location" value="2"> 2</label>
+                                <label><input type="radio" name="feature-location" value="3"> 3</label>
+                                <label><input type="radio" name="feature-location" value="4"> 4</label>
+                                <label><input type="radio" name="feature-location" value="5"> 5</label>
+                            </div>
+                        </div>
+                        <div class="rating-row">
+                            <span class="rating-label">Surf AI: Language translation, local guidance, personalized
+                                recommendations</span>
+                            <div class="rating-scale">
+                                <label><input type="radio" name="feature-surfai" value="1" required> 1</label>
+                                <label><input type="radio" name="feature-surfai" value="2"> 2</label>
+                                <label><input type="radio" name="feature-surfai" value="3"> 3</label>
+                                <label><input type="radio" name="feature-surfai" value="4"> 4</label>
+                                <label><input type="radio" name="feature-surfai" value="5"> 5</label>
+                            </div>
+                        </div>
+                        <div class="rating-row">
+                            <span class="rating-label">Global communities: Join cultural/interest-based groups</span>
+                            <div class="rating-scale">
+                                <label><input type="radio" name="feature-communities" value="1" required> 1</label>
+                                <label><input type="radio" name="feature-communities" value="2"> 2</label>
+                                <label><input type="radio" name="feature-communities" value="3"> 3</label>
+                                <label><input type="radio" name="feature-communities" value="4"> 4</label>
+                                <label><input type="radio" name="feature-communities" value="5"> 5</label>
+                            </div>
+                        </div>
+                        <div class="rating-row">
+                            <span class="rating-label">Mini-Drifts: Create temp event spaces for meetups/study groups
+                                (1hr-2 days)</span>
+                            <div class="rating-scale">
+                                <label><input type="radio" name="feature-minidrifts" value="1" required> 1</label>
+                                <label><input type="radio" name="feature-minidrifts" value="2"> 2</label>
+                                <label><input type="radio" name="feature-minidrifts" value="3"> 3</label>
+                                <label><input type="radio" name="feature-minidrifts" value="4"> 4</label>
+                                <label><input type="radio" name="feature-minidrifts" value="5"> 5</label>
+                            </div>
+                        </div>
+                        <div class="rating-row">
+                            <span class="rating-label">Privacy-first design: Your data is secure and private</span>
+                            <div class="rating-scale">
+                                <label><input type="radio" name="feature-privacy" value="1" required> 1</label>
+                                <label><input type="radio" name="feature-privacy" value="2"> 2</label>
+                                <label><input type="radio" name="feature-privacy" value="3"> 3</label>
+                                <label><input type="radio" name="feature-privacy" value="4"> 4</label>
+                                <label><input type="radio" name="feature-privacy" value="5"> 5</label>
+                            </div>
+                        </div>
+                        <div class="rating-row">
+                            <span class="rating-label">Connect bilingual members: Get help from people who speak your
+                                language</span>
+                            <div class="rating-scale">
+                                <label><input type="radio" name="feature-bilingual" value="1" required> 1</label>
+                                <label><input type="radio" name="feature-bilingual" value="2"> 2</label>
+                                <label><input type="radio" name="feature-bilingual" value="3"> 3</label>
+                                <label><input type="radio" name="feature-bilingual" value="4"> 4</label>
+                                <label><input type="radio" name="feature-bilingual" value="5"> 5</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>How much would each type of support help you?</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="supportNeeds" value="cultural">
+                            <span>Cultural connection and heritage celebration</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="supportNeeds" value="language">
+                            <span>Language support and translation</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="supportNeeds" value="local">
+                            <span>Local guidance (services, events, support networks)</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="supportNeeds" value="community">
+                            <span>Community building and friendships</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="supportNeeds" value="events">
+                            <span>Organizing/joining small gatherings</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 4: Usage & Adoption -->
+            <div class="survey-section">
+                <h2>Would You Use Drift?</h2>
+
+                <div class="form-group">
+                    <label>If Drift were available to you (free for personal use), how likely would you be to use
+                        it?</label>
+                    <div class="nps-scale">
+                        <div class="nps-labels">
+                            <span>Not likely</span>
+                            <span>Very likely</span>
+                        </div>
+                        <div class="nps-options">
+                            <label><input type="radio" name="usageLikelihood" value="0" required> 0</label>
+                            <label><input type="radio" name="usageLikelihood" value="1"> 1</label>
+                            <label><input type="radio" name="usageLikelihood" value="2"> 2</label>
+                            <label><input type="radio" name="usageLikelihood" value="3"> 3</label>
+                            <label><input type="radio" name="usageLikelihood" value="4"> 4</label>
+                            <label><input type="radio" name="usageLikelihood" value="5"> 5</label>
+                            <label><input type="radio" name="usageLikelihood" value="6"> 6</label>
+                            <label><input type="radio" name="usageLikelihood" value="7"> 7</label>
+                            <label><input type="radio" name="usageLikelihood" value="8"> 8</label>
+                            <label><input type="radio" name="usageLikelihood" value="9"> 9</label>
+                            <label><input type="radio" name="usageLikelihood" value="10"> 10</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Have you tried other platforms to connect with people in your new location?</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="triedOthers" value="yes-good" required>
+                            <span>Yes, and they worked well</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="triedOthers" value="yes-not-good">
+                            <span>Yes, but they weren't helpful</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="triedOthers" value="no-didnt-find">
+                            <span>Tried to find one but couldn't</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="triedOthers" value="no-havent-tried">
+                            <span>No, haven't tried</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>How much would easier adjustment impact your overall experience living abroad?</label>
+                    <input type="range" name="adjustmentImpact" min="0" max="100" value="75" class="slider"
+                        oninput="this.nextElementSibling.value = this.value + '%'">
+                    <output>75%</output>
+                </div>
+
+                <div class="form-group">
+                    <label>How likely are you to recommend Drift to other foreigners/people away from home?</label>
+                    <div class="nps-scale">
+                        <div class="nps-labels">
+                            <span>Not likely</span>
+                            <span>Very likely</span>
+                        </div>
+                        <div class="nps-options">
+                            <label><input type="radio" name="recommendLikelihood" value="0" required> 0</label>
+                            <label><input type="radio" name="recommendLikelihood" value="1"> 1</label>
+                            <label><input type="radio" name="recommendLikelihood" value="2"> 2</label>
+                            <label><input type="radio" name="recommendLikelihood" value="3"> 3</label>
+                            <label><input type="radio" name="recommendLikelihood" value="4"> 4</label>
+                            <label><input type="radio" name="recommendLikelihood" value="5"> 5</label>
+                            <label><input type="radio" name="recommendLikelihood" value="6"> 6</label>
+                            <label><input type="radio" name="recommendLikelihood" value="7"> 7</label>
+                            <label><input type="radio" name="recommendLikelihood" value="8"> 8</label>
+                            <label><input type="radio" name="recommendLikelihood" value="9"> 9</label>
+                            <label><input type="radio" name="recommendLikelihood" value="10"> 10</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>What would make Drift most valuable to you?</label>
+                    <textarea name="valuableFeatures" rows="3" placeholder="Share your thoughts..."></textarea>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Survey</button>
+        </form>
+
+        <div class="survey-footer">
+            <p>Thank you for your feedback! Your input helps us create better support for people living away from home.
+                Visit driftnet.live to learn more!</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('foreignerSurvey').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Thank you for completing the survey! Your responses have been recorded.');
+        });
+    </script>
+</body>
+
+</html>

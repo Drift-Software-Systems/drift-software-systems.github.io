@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drift Survey - School Administrators</title>
+    <link rel="stylesheet" href="../css/survey.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="survey-header">
+            <h1>Drift Market Research Survey - School Administrators</h1>
+            <p class="survey-intro">Drift (driftnet.live) is a platform that helps schools improve student retention,
+                foster inclusivity, and build campus community. Pricing: $3/student/month. We'd love your feedback!</p>
+        </div>
+
+        <form class="survey-form" id="schoolAdminSurvey">
+
+            <!-- Section 1: Institution Information -->
+            <div class="survey-section">
+                <h2>About Your Institution</h2>
+
+                <div class="form-group">
+                    <label>Type of institution</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="institutionType" value="university" required>
+                            <span>University</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="institutionType" value="college">
+                            <span>College</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="institutionType" value="community">
+                            <span>Community College</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="institutionType" value="private">
+                            <span>Private Institution</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="institutionType" value="other">
+                            <span>Other</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Student population size</label>
+                    <select name="studentPopulation" required>
+                        <option value="">Select size</option>
+                        <option value="under-1000">Under 1,000</option>
+                        <option value="1000-5000">1,000 - 5,000</option>
+                        <option value="5000-10000">5,000 - 10,000</option>
+                        <option value="10000-20000">10,000 - 20,000</option>
+                        <option value="20000+">20,000+</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>What percentage of your students are international or from out-of-state?</label>
+                    <input type="range" name="internationalPercentage" min="0" max="100" value="50" class="slider"
+                        oninput="this.nextElementSibling.value = this.value + '%'">
+                    <output>50%</output>
+                </div>
+
+                <div class="form-group">
+                    <label>What is your role?</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="role" value="admin">
+                            <span>Administrator/Executive</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="role" value="student-affairs">
+                            <span>Student Affairs</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="role" value="international">
+                            <span>International Student Services</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="role" value="diversity">
+                            <span>Diversity & Inclusion</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="role" value="it">
+                            <span>IT/Technology</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="role" value="other">
+                            <span>Other</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 2: Student Challenges -->
+            <div class="survey-section">
+                <h2>Student Integration Challenges</h2>
+
+                <div class="form-group">
+                    <label>What challenges do students face at your institution? (Select all that apply)</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="studentChallenges" value="social-integration">
+                            <span>Social integration difficulties</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="studentChallenges" value="isolation">
+                            <span>Student isolation and loneliness</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="studentChallenges" value="cultural">
+                            <span>Cultural adjustment issues</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="studentChallenges" value="retention">
+                            <span>Student retention problems</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="studentChallenges" value="mental-health">
+                            <span>Mental health concerns</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="studentChallenges" value="diversity">
+                            <span>Supporting diverse student body</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="studentChallenges" value="engagement">
+                            <span>Low campus engagement</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>How significant is student retention an issue at your institution?</label>
+                    <div class="rating-stars">
+                        <input type="radio" name="retentionIssue" value="5" id="retention5" required>
+                        <label for="retention5">★</label>
+                        <input type="radio" name="retentionIssue" value="4" id="retention4">
+                        <label for="retention4">★</label>
+                        <input type="radio" name="retentionIssue" value="3" id="retention3">
+                        <label for="retention3">★</label>
+                        <input type="radio" name="retentionIssue" value="2" id="retention2">
+                        <label for="retention2">★</label>
+                        <input type="radio" name="retentionIssue" value="1" id="retention1">
+                        <label for="retention1">★</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>What is your current first-year retention rate?</label>
+                    <select name="retentionRate" required>
+                        <option value="">Select range</option>
+                        <option value="under-70">Under 70%</option>
+                        <option value="70-80">70-80%</option>
+                        <option value="80-85">80-85%</option>
+                        <option value="85-90">85-90%</option>
+                        <option value="90+">90% or higher</option>
+                        <option value="unknown">Don't know</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>How much does student social integration impact retention at your school?</label>
+                    <input type="range" name="integrationImpact" min="0" max="100" value="50" class="slider"
+                        oninput="this.nextElementSibling.value = this.value + '%'">
+                    <output>50%</output>
+                </div>
+            </div>
+
+            <!-- Section 3: Drift Features & Benefits -->
+            <div class="survey-section">
+                <h2>Drift Platform for Your Institution</h2>
+
+                <div class="form-group">
+                    <label>Rate the value of these Drift features for your institution (1 = Not valuable, 5 = Very
+                        valuable)</label>
+                    <div class="rating-grid">
+                        <div class="rating-row">
+                            <span class="rating-label">Student hometown/cultural connections</span>
+                            <div class="rating-scale">
+                                <label><input type="radio" name="feature-hometown" value="1" required> 1</label>
+                                <label><input type="radio" name="feature-hometown" value="2"> 2</label>
+                                <label><input type="radio" name="feature-hometown" value="3"> 3</label>
+                                <label><input type="radio" name="feature-hometown" value="4"> 4</label>
+                                <label><input type="radio" name="feature-hometown" value="5"> 5</label>
+                            </div>
+                        </div>
+                        <div class="rating-row">
+                            <span class="rating-label">AI assistant for student support</span>
+                            <div class="rating-scale">
+                                <label><input type="radio" name="feature-ai" value="1" required> 1</label>
+                                <label><input type="radio" name="feature-ai" value="2"> 2</label>
+                                <label><input type="radio" name="feature-ai" value="3"> 3</label>
+                                <label><input type="radio" name="feature-ai" value="4"> 4</label>
+                                <label><input type="radio" name="feature-ai" value="5"> 5</label>
+                            </div>
+                        </div>
+                        <div class="rating-row">
+                            <span class="rating-label">Student engagement tracking</span>
+                            <div class="rating-scale">
+                                <label><input type="radio" name="feature-tracking" value="1" required> 1</label>
+                                <label><input type="radio" name="feature-tracking" value="2"> 2</label>
+                                <label><input type="radio" name="feature-tracking" value="3"> 3</label>
+                                <label><input type="radio" name="feature-tracking" value="4"> 4</label>
+                                <label><input type="radio" name="feature-tracking" value="5"> 5</label>
+                            </div>
+                        </div>
+                        <div class="rating-row">
+                            <span class="rating-label">Mini-Drifts for campus events</span>
+                            <div class="rating-scale">
+                                <label><input type="radio" name="feature-events" value="1" required> 1</label>
+                                <label><input type="radio" name="feature-events" value="2"> 2</label>
+                                <label><input type="radio" name="feature-events" value="3"> 3</label>
+                                <label><input type="radio" name="feature-events" value="4"> 4</label>
+                                <label><input type="radio" name="feature-events" value="5"> 5</label>
+                            </div>
+                        </div>
+                        <div class="rating-row">
+                            <span class="rating-label">Content moderation & oversight tools</span>
+                            <div class="rating-scale">
+                                <label><input type="radio" name="feature-moderation" value="1" required> 1</label>
+                                <label><input type="radio" name="feature-moderation" value="2"> 2</label>
+                                <label><input type="radio" name="feature-moderation" value="3"> 3</label>
+                                <label><input type="radio" name="feature-moderation" value="4"> 4</label>
+                                <label><input type="radio" name="feature-moderation" value="5"> 5</label>
+                            </div>
+                        </div>
+                        <div class="rating-row">
+                            <span class="rating-label">Analytics & insights dashboard</span>
+                            <div class="rating-scale">
+                                <label><input type="radio" name="feature-analytics" value="1" required> 1</label>
+                                <label><input type="radio" name="feature-analytics" value="2"> 2</label>
+                                <label><input type="radio" name="feature-analytics" value="3"> 3</label>
+                                <label><input type="radio" name="feature-analytics" value="4"> 4</label>
+                                <label><input type="radio" name="feature-analytics" value="5"> 5</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>How likely would a 40% reduction in cultural adjustment time impact your decision to adopt
+                        Drift?</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="adjustmentImpact" value="very-influential" required>
+                            <span>Very influential - Major factor</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="adjustmentImpact" value="influential">
+                            <span>Influential</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="adjustmentImpact" value="somewhat">
+                            <span>Somewhat influential</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="adjustmentImpact" value="not-very">
+                            <span>Not very influential</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="adjustmentImpact" value="not-at-all">
+                            <span>Not influential at all</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>What outcomes would you most want to see from Drift? (Select up to 3)</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="desiredOutcomes" value="retention">
+                            <span>Improved student retention rates</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="desiredOutcomes" value="integration">
+                            <span>Better social integration</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="desiredOutcomes" value="mental-health">
+                            <span>Improved student mental health</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="desiredOutcomes" value="engagement">
+                            <span>Increased campus engagement</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="desiredOutcomes" value="diversity">
+                            <span>Stronger diversity & inclusion</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="desiredOutcomes" value="satisfaction">
+                            <span>Higher student satisfaction scores</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 4: Implementation -->
+            <div class="survey-section">
+                <h2>Implementation Considerations</h2>
+
+                <div class="form-group">
+                    <label>At $3/student/month, how likely would your institution be to adopt Drift?</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="adoptionLikelihood" value="very-likely" required>
+                            <span>Very likely - Ready to pilot</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="adoptionLikelihood" value="likely">
+                            <span>Likely - Need more details</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="adoptionLikelihood" value="maybe">
+                            <span>Maybe - Budget dependent</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="adoptionLikelihood" value="unlikely">
+                            <span>Unlikely - Too expensive</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="adoptionLikelihood" value="not-likely">
+                            <span>Not likely - Not a priority</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>What concerns do you have about implementing Drift? (Select all that apply)</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="concerns" value="cost">
+                            <span>Cost and budget</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="concerns" value="privacy">
+                            <span>Student privacy and data security</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="concerns" value="adoption">
+                            <span>Student adoption rates</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="concerns" value="moderation">
+                            <span>Content moderation needs</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="concerns" value="integration">
+                            <span>Technical integration</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="concerns" value="support">
+                            <span>Staff training and support</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="concerns" value="none">
+                            <span>No major concerns</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>What timeframe would you consider for a pilot program?</label>
+                    <select name="pilotTimeframe" required>
+                        <option value="">Select timeframe</option>
+                        <option value="this-semester">This semester</option>
+                        <option value="next-semester">Next semester</option>
+                        <option value="next-year">Next academic year</option>
+                        <option value="future">Future consideration</option>
+                        <option value="not-interested">Not interested in pilot</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>How likely are you to recommend Drift to other institutions?</label>
+                    <div class="nps-scale">
+                        <div class="nps-labels">
+                            <span>Not likely</span>
+                            <span>Very likely</span>
+                        </div>
+                        <div class="nps-options">
+                            <label><input type="radio" name="recommend" value="0" required> 0</label>
+                            <label><input type="radio" name="recommend" value="1"> 1</label>
+                            <label><input type="radio" name="recommend" value="2"> 2</label>
+                            <label><input type="radio" name="recommend" value="3"> 3</label>
+                            <label><input type="radio" name="recommend" value="4"> 4</label>
+                            <label><input type="radio" name="recommend" value="5"> 5</label>
+                            <label><input type="radio" name="recommend" value="6"> 6</label>
+                            <label><input type="radio" name="recommend" value="7"> 7</label>
+                            <label><input type="radio" name="recommend" value="8"> 8</label>
+                            <label><input type="radio" name="recommend" value="9"> 9</label>
+                            <label><input type="radio" name="recommend" value="10"> 10</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>What additional features would be most valuable for your institution?</label>
+                    <textarea name="additionalFeatures" rows="3" placeholder="Share your thoughts..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Would you like to be contacted about a pilot program?</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="contactInterest" value="yes" required>
+                            <span>Yes, please contact me</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="contactInterest" value="later">
+                            <span>Not now, follow up later</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="contactInterest" value="no">
+                            <span>No thank you</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Survey</button>
+        </form>
+
+        <div class="survey-footer">
+            <p>Thank you for your time! Your feedback helps us build better support systems for students.</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('schoolAdminSurvey').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Thank you for completing the survey! Your responses have been recorded.');
+        });
+    </script>
+</body>
+
+</html>

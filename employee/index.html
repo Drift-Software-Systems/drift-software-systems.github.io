@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drift Survey - Employees</title>
+    <link rel="stylesheet" href="../css/survey.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="survey-header">
+            <h1>Drift Market Research Survey - Employees</h1>
+            <p class="survey-intro">Drift is an AI-powered platform that helps you connect with colleagues, especially
+                those from your hometown or with similar backgrounds. We'd love to hear if this would be valuable to
+                you!</p>
+        </div>
+
+        <form class="survey-form" id="employeeSurvey">
+
+            <!-- Section 1: Your Background -->
+            <div class="survey-section">
+                <h2>About Your Work Situation</h2>
+
+                <div class="form-group">
+                    <label>Are you new to your company or relocating to a new area for work?</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="newEmployee" value="very-new" required>
+                            <span>Yes, very new (less than 6 months)</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="newEmployee" value="somewhat-new">
+                            <span>Somewhat new (6 months - 1 year)</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="newEmployee" value="established">
+                            <span>Been here a while (1-3 years)</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="newEmployee" value="veteran">
+                            <span>Long-time employee (3+ years)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Are you working in a different city or country than where you're originally from?</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="relocated" value="international" required>
+                            <span>Yes, I'm from a different country</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="relocated" value="different-region">
+                            <span>Yes, different region/city</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="relocated" value="local">
+                            <span>No, I'm local</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Work arrangement</label>
+                    <select name="workArrangement" required>
+                        <option value="">Select one</option>
+                        <option value="remote">Fully remote</option>
+                        <option value="hybrid">Hybrid</option>
+                        <option value="office">In-office</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Section 2: Challenges & Feelings -->
+            <div class="survey-section">
+                <h2>Your Experience at Work</h2>
+
+                <div class="form-group">
+                    <label>Have you experienced any of these challenges adjusting to your workplace? (Select all that
+                        apply)</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="adjustmentChallenges" value="isolation">
+                            <span>Feeling isolated or lonely</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="adjustmentChallenges" value="homesickness">
+                            <span>Homesickness</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="adjustmentChallenges" value="cultural">
+                            <span>Cultural differences/barriers</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="adjustmentChallenges" value="finding-connections">
+                            <span>Difficulty finding people to connect with</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="adjustmentChallenges" value="language">
+                            <span>Language barriers</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="adjustmentChallenges" value="belonging">
+                            <span>Not feeling like I belong</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="adjustmentChallenges" value="none">
+                            <span>None - I've adjusted well</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>How much has adjusting to your workplace/new location affected your productivity?</label>
+                    <input type="range" name="productivityImpact" min="0" max="100" value="25" class="slider"
+                        oninput="this.nextElementSibling.value = this.value + '% impact'">
+                    <output>25% impact</output>
+                </div>
+
+                <div class="form-group">
+                    <label>Rate how connected you feel to your coworkers</label>
+                    <div class="rating-stars">
+                        <input type="radio" name="connectionLevel" value="5" id="conn5" required>
+                        <label for="conn5">★</label>
+                        <input type="radio" name="connectionLevel" value="4" id="conn4">
+                        <label for="conn4">★</label>
+                        <input type="radio" name="connectionLevel" value="3" id="conn3">
+                        <label for="conn3">★</label>
+                        <input type="radio" name="connectionLevel" value="2" id="conn2">
+                        <label for="conn2">★</label>
+                        <input type="radio" name="connectionLevel" value="1" id="conn1">
+                        <label for="conn1">★</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Have you found colleagues from your hometown or home country at work?</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="foundHometown" value="yes-many" required>
+                            <span>Yes, several people</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="foundHometown" value="yes-few">
+                            <span>Yes, a few</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="foundHometown" value="no-wish">
+                            <span>No, but I wish I could find them</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="foundHometown" value="no-dont-care">
+                            <span>No, and it doesn't matter to me</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="foundHometown" value="na">
+                            <span>Not applicable (I'm local)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Rate your sense of belonging at work (1 = Don't belong, 10 = Completely belong)</label>
+                    <div class="scale-10">
+                        <label><input type="radio" name="belonging" value="1" required> 1</label>
+                        <label><input type="radio" name="belonging" value="2"> 2</label>
+                        <label><input type="radio" name="belonging" value="3"> 3</label>
+                        <label><input type="radio" name="belonging" value="4"> 4</label>
+                        <label><input type="radio" name="belonging" value="5"> 5</label>
+                        <label><input type="radio" name="belonging" value="6"> 6</label>
+                        <label><input type="radio" name="belonging" value="7"> 7</label>
+                        <label><input type="radio" name="belonging" value="8"> 8</label>
+                        <label><input type="radio" name="belonging" value="9"> 9</label>
+                        <label><input type="radio" name="belonging" value="10"> 10</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>How often do you interact socially with coworkers outside of work tasks?</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="socialFrequency" value="daily" required>
+                            <span>Daily</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="socialFrequency" value="weekly">
+                            <span>Weekly</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="socialFrequency" value="monthly">
+                            <span>Monthly</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="socialFrequency" value="rarely">
+                            <span>Rarely</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="socialFrequency" value="never">
+                            <span>Never</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>How important are workplace friendships to your job satisfaction?</label>
+                    <input type="range" name="friendshipImportance" min="0" max="100" value="50" class="slider"
+                        oninput="this.nextElementSibling.value = this.value + '%'">
+                    <output>50%</output>
+                </div>
+            </div>
+
+            <!-- Section 3: Interest in Drift Features -->
+            <div class="survey-section">
+                <h2>Would Drift Be Useful for You?</h2>
+
+                <div class="form-group">
+                    <label>How interested are you in these Drift features? (1 = Not interested, 5 = Very
+                        interested)</label>
+                    <div class="rating-grid">
+                        <div class="rating-row">
+                            <span class="rating-label">Surf AI: Get help finding a running partner, recipe buddy, etc.
+                                from your hometown</span>
+                            <div class="rating-scale">
+                                <label><input type="radio" name="feature-surfai" value="1" required> 1</label>
+                                <label><input type="radio" name="feature-surfai" value="2"> 2</label>
+                                <label><input type="radio" name="feature-surfai" value="3"> 3</label>
+                                <label><input type="radio" name="feature-surfai" value="4"> 4</label>
+                                <label><input type="radio" name="feature-surfai" value="5"> 5</label>
+                            </div>
+                        </div>
+                        <div class="rating-row">
+                            <span class="rating-label">Proximity-based connections: Find people from your home
+                                country/region nearby</span>
+                            <div class="rating-scale">
+                                <label><input type="radio" name="feature-proximity" value="1" required> 1</label>
+                                <label><input type="radio" name="feature-proximity" value="2"> 2</label>
+                                <label><input type="radio" name="feature-proximity" value="3"> 3</label>
+                                <label><input type="radio" name="feature-proximity" value="4"> 4</label>
+                                <label><input type="radio" name="feature-proximity" value="5"> 5</label>
+                            </div>
+                        </div>
+                        <div class="rating-row">
+                            <span class="rating-label">Diversity groups: Connect with others who share your
+                                background</span>
+                            <div class="rating-scale">
+                                <label><input type="radio" name="feature-diversity" value="1" required> 1</label>
+                                <label><input type="radio" name="feature-diversity" value="2"> 2</label>
+                                <label><input type="radio" name="feature-diversity" value="3"> 3</label>
+                                <label><input type="radio" name="feature-diversity" value="4"> 4</label>
+                                <label><input type="radio" name="feature-diversity" value="5"> 5</label>
+                            </div>
+                        </div>
+                        <div class="rating-row">
+                            <span class="rating-label">Mini-Drifts: Event spaces for ERG events, team-building,
+                                workshops (1hr-2 days)</span>
+                            <div class="rating-scale">
+                                <label><input type="radio" name="feature-minidrifts" value="1" required> 1</label>
+                                <label><input type="radio" name="feature-minidrifts" value="2"> 2</label>
+                                <label><input type="radio" name="feature-minidrifts" value="3"> 3</label>
+                                <label><input type="radio" name="feature-minidrifts" value="4"> 4</label>
+                                <label><input type="radio" name="feature-minidrifts" value="5"> 5</label>
+                            </div>
+                        </div>
+                        <div class="rating-row">
+                            <span class="rating-label">Recognition for helping others: Get rewards/recognition on your
+                                profile for helping new employees</span>
+                            <div class="rating-scale">
+                                <label><input type="radio" name="feature-recognition" value="1" required> 1</label>
+                                <label><input type="radio" name="feature-recognition" value="2"> 2</label>
+                                <label><input type="radio" name="feature-recognition" value="3"> 3</label>
+                                <label><input type="radio" name="feature-recognition" value="4"> 4</label>
+                                <label><input type="radio" name="feature-recognition" value="5"> 5</label>
+                            </div>
+                        </div>
+                        <div class="rating-row">
+                            <span class="rating-label">Community features: Posts, comments, stories to build genuine
+                                relationships</span>
+                            <div class="rating-scale">
+                                <label><input type="radio" name="feature-community" value="1" required> 1</label>
+                                <label><input type="radio" name="feature-community" value="2"> 2</label>
+                                <label><input type="radio" name="feature-community" value="3"> 3</label>
+                                <label><input type="radio" name="feature-community" value="4"> 4</label>
+                                <label><input type="radio" name="feature-community" value="5"> 5</label>
+                            </div>
+                        </div>
+                        <div class="rating-row">
+                            <span class="rating-label">Connect by interests: Find people with shared
+                                hobbies/professional interests beyond just hometown</span>
+                            <div class="rating-scale">
+                                <label><input type="radio" name="feature-interests" value="1" required> 1</label>
+                                <label><input type="radio" name="feature-interests" value="2"> 2</label>
+                                <label><input type="radio" name="feature-interests" value="3"> 3</label>
+                                <label><input type="radio" name="feature-interests" value="4"> 4</label>
+                                <label><input type="radio" name="feature-interests" value="5"> 5</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>If your company offered Drift, how likely would you be to use it?</label>
+                    <div class="nps-scale">
+                        <div class="nps-labels">
+                            <span>Not likely</span>
+                            <span>Very likely</span>
+                        </div>
+                        <div class="nps-options">
+                            <label><input type="radio" name="usageLikelihood" value="0" required> 0</label>
+                            <label><input type="radio" name="usageLikelihood" value="1"> 1</label>
+                            <label><input type="radio" name="usageLikelihood" value="2"> 2</label>
+                            <label><input type="radio" name="usageLikelihood" value="3"> 3</label>
+                            <label><input type="radio" name="usageLikelihood" value="4"> 4</label>
+                            <label><input type="radio" name="usageLikelihood" value="5"> 5</label>
+                            <label><input type="radio" name="usageLikelihood" value="6"> 6</label>
+                            <label><input type="radio" name="usageLikelihood" value="7"> 7</label>
+                            <label><input type="radio" name="usageLikelihood" value="8"> 8</label>
+                            <label><input type="radio" name="usageLikelihood" value="9"> 9</label>
+                            <label><input type="radio" name="usageLikelihood" value="10"> 10</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 4: Support & Community -->
+            <div class="survey-section">
+                <h2>Helping Others & Community</h2>
+
+                <div class="form-group">
+                    <label>Would you be interested in helping new employees adjust if you received recognition that
+                        could help with promotions/raises?</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="helpInterest" value="very-yes" required>
+                            <span>Yes, definitely!</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="helpInterest" value="yes">
+                            <span>Yes, probably</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="helpInterest" value="maybe">
+                            <span>Maybe</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="helpInterest" value="probably-not">
+                            <span>Probably not</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="helpInterest" value="no">
+                            <span>No</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>How important is it to you to connect with people who share your cultural background or
+                        experiences?</label>
+                    <input type="range" name="culturalConnectionImportance" min="0" max="100" value="50" class="slider"
+                        oninput="this.nextElementSibling.value = this.value + '%'">
+                    <output>50%</output>
+                </div>
+
+                <div class="form-group">
+                    <label>What would be most valuable about Drift for you? (Select top 3)</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="valuePoints" value="find-hometown">
+                            <span>Finding people from my hometown/country</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="valuePoints" value="reduce-isolation">
+                            <span>Reducing feelings of isolation</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="valuePoints" value="career-recognition">
+                            <span>Getting career recognition for helping others</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="valuePoints" value="shared-interests">
+                            <span>Finding people with shared interests/hobbies</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="valuePoints" value="cultural-groups">
+                            <span>Joining diversity/cultural groups</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="valuePoints" value="support-access">
+                            <span>Easy access to support and help</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="valuePoints" value="event-coordination">
+                            <span>Event coordination (Mini-Drifts)</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 5: Final Thoughts -->
+            <div class="survey-section">
+                <h2>Final Questions</h2>
+
+                <div class="form-group">
+                    <label>How likely are you to recommend Drift to your colleagues?</label>
+                    <div class="nps-scale">
+                        <div class="nps-labels">
+                            <span>Not likely</span>
+                            <span>Very likely</span>
+                        </div>
+                        <div class="nps-options">
+                            <label><input type="radio" name="recommendLikelihood" value="0" required> 0</label>
+                            <label><input type="radio" name="recommendLikelihood" value="1"> 1</label>
+                            <label><input type="radio" name="recommendLikelihood" value="2"> 2</label>
+                            <label><input type="radio" name="recommendLikelihood" value="3"> 3</label>
+                            <label><input type="radio" name="recommendLikelihood" value="4"> 4</label>
+                            <label><input type="radio" name="recommendLikelihood" value="5"> 5</label>
+                            <label><input type="radio" name="recommendLikelihood" value="6"> 6</label>
+                            <label><input type="radio" name="recommendLikelihood" value="7"> 7</label>
+                            <label><input type="radio" name="recommendLikelihood" value="8"> 8</label>
+                            <label><input type="radio" name="recommendLikelihood" value="9"> 9</label>
+                            <label><input type="radio" name="recommendLikelihood" value="10"> 10</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Questions Section -->
+                <div class="form-group">
+                    <label>Would you suggest your HR department look into Drift?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="suggestToHR" value="Yes" required> Yes</label>
+                        <label><input type="radio" name="suggestToHR" value="Maybe"> Maybe</label>
+                        <label><input type="radio" name="suggestToHR" value="No"> No</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Is there anything else you'd like to share about your workplace connections or Drift?</label>
+                    <textarea name="additionalFeedback" rows="4"></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Survey</button>
+        </form>
+
+        <div class="survey-footer">
+            <p>Thank you! Your feedback helps us build better workplace connections.</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('employeeSurvey').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Thank you for completing the survey! Your responses have been recorded.');
+        });
+    </script>
+</body>
+
+</html>

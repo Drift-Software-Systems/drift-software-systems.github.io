@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drift Survey - Students</title>
+    <link rel="stylesheet" href="../css/survey.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="survey-header">
+            <h1>Drift Market Research Survey - Students</h1>
+            <p class="survey-intro">Drift (driftnet.live) is a social network that helps students find study partners,
+                connect with people from home, join campus events, and get rewarded for helping classmates. We'd love
+                your feedback!</p>
+        </div>
+
+        <form class="survey-form" id="studentSurvey">
+
+            <!-- Section 1: Student Background -->
+            <div class="survey-section">
+                <h2>About You</h2>
+
+                <div class="form-group">
+                    <label>What year are you in?</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="year" value="freshman" required>
+                            <span>Freshman/First Year</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="year" value="sophomore">
+                            <span>Sophomore/Second Year</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="year" value="junior">
+                            <span>Junior/Third Year</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="year" value="senior">
+                            <span>Senior/Fourth Year+</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="year" value="graduate">
+                            <span>Graduate Student</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Are you an international student or from out-of-state?</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="location" value="international" required>
+                            <span>International student</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="location" value="out-of-state">
+                            <span>Out-of-state student</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="location" value="local">
+                            <span>Local/In-state student</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Living situation</label>
+                    <select name="living" required>
+                        <option value="">Select option</option>
+                        <option value="dorm">Campus dormitory</option>
+                        <option value="off-campus">Off-campus housing</option>
+                        <option value="apartment">Apartment</option>
+                        <option value="home">Living at home</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>How would you rate your overall campus experience so far?</label>
+                    <div class="rating-stars">
+                        <input type="radio" name="experience" value="5" id="exp5" required>
+                        <label for="exp5">★</label>
+                        <input type="radio" name="experience" value="4" id="exp4">
+                        <label for="exp4">★</label>
+                        <input type="radio" name="experience" value="3" id="exp3">
+                        <label for="exp3">★</label>
+                        <input type="radio" name="experience" value="2" id="exp2">
+                        <label for="exp2">★</label>
+                        <input type="radio" name="experience" value="1" id="exp1">
+                        <label for="exp1">★</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 2: Campus Life & Connections -->
+            <div class="survey-section">
+                <h2>Your Campus Life</h2>
+
+                <div class="form-group">
+                    <label>How easy has it been to make friends on campus?</label>
+                    <div class="scale-10">
+                        <div class="scale-labels">
+                            <span>Very difficult</span>
+                            <span>Very easy</span>
+                        </div>
+                        <div class="scale-options">
+                            <label><input type="radio" name="makingFriends" value="1" required> 1</label>
+                            <label><input type="radio" name="makingFriends" value="2"> 2</label>
+                            <label><input type="radio" name="makingFriends" value="3"> 3</label>
+                            <label><input type="radio" name="makingFriends" value="4"> 4</label>
+                            <label><input type="radio" name="makingFriends" value="5"> 5</label>
+                            <label><input type="radio" name="makingFriends" value="6"> 6</label>
+                            <label><input type="radio" name="makingFriends" value="7"> 7</label>
+                            <label><input type="radio" name="makingFriends" value="8"> 8</label>
+                            <label><input type="radio" name="makingFriends" value="9"> 9</label>
+                            <label><input type="radio" name="makingFriends" value="10"> 10</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>What challenges have you faced in adjusting to campus life? (Select all that apply)</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="challenges" value="making-friends">
+                            <span>Making friends</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="challenges" value="homesickness">
+                            <span>Homesickness</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="challenges" value="study-partners">
+                            <span>Finding study partners</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="challenges" value="cultural">
+                            <span>Cultural adjustment</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="challenges" value="belonging">
+                            <span>Feeling like I don't belong</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="challenges" value="activities">
+                            <span>Finding activities/clubs I like</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="challenges" value="similar-background">
+                            <span>Meeting people from similar backgrounds</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="challenges" value="none">
+                            <span>No challenges - Adjusting well</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>How often do you feel lonely or isolated on campus?</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="loneliness" value="always" required>
+                            <span>Almost always</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="loneliness" value="often">
+                            <span>Often</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="loneliness" value="sometimes">
+                            <span>Sometimes</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="loneliness" value="rarely">
+                            <span>Rarely</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="loneliness" value="never">
+                            <span>Never</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>How important is it to connect with people who share your background/culture?</label>
+                    <input type="range" name="culturalConnectionImportance" min="0" max="100" value="50" class="slider"
+                        oninput="this.nextElementSibling.value = this.value + '%'">
+                    <output>50%</output>
+                </div>
+
+                <div class="form-group">
+                    <label>Have you found people on campus from your hometown or home country?</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="foundHometown" value="yes-connected" required>
+                            <span>Yes, and we've connected</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="foundHometown" value="yes-not-connected">
+                            <span>Yes, but we haven't connected</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="foundHometown" value="dont-know">
+                            <span>I don't know if there are any</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="foundHometown" value="no">
+                            <span>No, haven't found any</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="foundHometown" value="not-looking">
+                            <span>Not looking for them</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 3: Interest in Drift Features -->
+            <div class="survey-section">
+                <h2>How Drift Could Help You</h2>
+
+                <div class="form-group">
+                    <label>How valuable would these Drift features be? (1 = Not valuable, 5 = Very valuable)</label>
+                    <div class="rating-grid">
+                        <div class="rating-row">
+                            <span class="rating-label">Find students from your hometown</span>
+                            <div class="rating-scale">
+                                <label><input type="radio" name="feature-hometown" value="1" required> 1</label>
+                                <label><input type="radio" name="feature-hometown" value="2"> 2</label>
+                                <label><input type="radio" name="feature-hometown" value="3"> 3</label>
+                                <label><input type="radio" name="feature-hometown" value="4"> 4</label>
+                                <label><input type="radio" name="feature-hometown" value="5"> 5</label>
+                            </div>
+                        </div>
+                        <div class="rating-row">
+                            <span class="rating-label">AI assistant for campus questions</span>
+                            <div class="rating-scale">
+                                <label><input type="radio" name="feature-ai" value="1" required> 1</label>
+                                <label><input type="radio" name="feature-ai" value="2"> 2</label>
+                                <label><input type="radio" name="feature-ai" value="3"> 3</label>
+                                <label><input type="radio" name="feature-ai" value="4"> 4</label>
+                                <label><input type="radio" name="feature-ai" value="5"> 5</label>
+                            </div>
+                        </div>
+                        <div class="rating-row">
+                            <span class="rating-label">Find study partners for your classes</span>
+                            <div class="rating-scale">
+                                <label><input type="radio" name="feature-study" value="1" required> 1</label>
+                                <label><input type="radio" name="feature-study" value="2"> 2</label>
+                                <label><input type="radio" name="feature-study" value="3"> 3</label>
+                                <label><input type="radio" name="feature-study" value="4"> 4</label>
+                                <label><input type="radio" name="feature-study" value="5"> 5</label>
+                            </div>
+                        </div>
+                        <div class="rating-row">
+                            <span class="rating-label">Cultural & diversity groups</span>
+                            <div class="rating-scale">
+                                <label><input type="radio" name="feature-groups" value="1" required> 1</label>
+                                <label><input type="radio" name="feature-groups" value="2"> 2</label>
+                                <label><input type="radio" name="feature-groups" value="3"> 3</label>
+                                <label><input type="radio" name="feature-groups" value="4"> 4</label>
+                                <label><input type="radio" name="feature-groups" value="5"> 5</label>
+                            </div>
+                        </div>
+                        <div class="rating-row">
+                            <span class="rating-label">Find people with shared hobbies/interests</span>
+                            <div class="rating-scale">
+                                <label><input type="radio" name="feature-hobbies" value="1" required> 1</label>
+                                <label><input type="radio" name="feature-hobbies" value="2"> 2</label>
+                                <label><input type="radio" name="feature-hobbies" value="3"> 3</label>
+                                <label><input type="radio" name="feature-hobbies" value="4"> 4</label>
+                                <label><input type="radio" name="feature-hobbies" value="5"> 5</label>
+                            </div>
+                        </div>
+                        <div class="rating-row">
+                            <span class="rating-label">Mini-Drifts for campus events</span>
+                            <div class="rating-scale">
+                                <label><input type="radio" name="feature-events" value="1" required> 1</label>
+                                <label><input type="radio" name="feature-events" value="2"> 2</label>
+                                <label><input type="radio" name="feature-events" value="3"> 3</label>
+                                <label><input type="radio" name="feature-events" value="4"> 4</label>
+                                <label><input type="radio" name="feature-events" value="5"> 5</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>What kinds of connections would you want to make on Drift? (Select all that apply)</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="connectionTypes" value="hometown">
+                            <span>People from my hometown/country</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="connectionTypes" value="classes">
+                            <span>Students in my classes</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="connectionTypes" value="major">
+                            <span>People in my major</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="connectionTypes" value="hobbies">
+                            <span>People with similar hobbies</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="connectionTypes" value="sports">
+                            <span>Sports and fitness buddies</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="connectionTypes" value="cultural">
+                            <span>Cultural/ethnic communities</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="connectionTypes" value="roommates">
+                            <span>Potential roommates</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Would you use Drift if your school offered it?</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="wouldUse" value="definitely" required>
+                            <span>Definitely! I really need this</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="wouldUse" value="probably">
+                            <span>Probably</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="wouldUse" value="maybe">
+                            <span>Maybe</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="wouldUse" value="probably-not">
+                            <span>Probably not</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="wouldUse" value="no">
+                            <span>No</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 4: Helping Others -->
+            <div class="survey-section">
+                <h2>Supporting New Students</h2>
+
+                <div class="form-group">
+                    <label>Would you be interested in helping new students adjust to campus?</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="helpNewStudents" value="yes-actively" required>
+                            <span>Yes, I'd actively help</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="helpNewStudents" value="yes-occasionally">
+                            <span>Yes, occasionally</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="helpNewStudents" value="maybe">
+                            <span>Maybe, if I have time</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="helpNewStudents" value="probably-not">
+                            <span>Probably not</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="helpNewStudents" value="no">
+                            <span>No</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>If you could earn recognition/rewards for helping new students, how motivated would you
+                        be?</label>
+                    <div class="rating-stars">
+                        <input type="radio" name="rewardMotivation" value="5" id="reward5" required>
+                        <label for="reward5">★</label>
+                        <input type="radio" name="rewardMotivation" value="4" id="reward4">
+                        <label for="reward4">★</label>
+                        <input type="radio" name="rewardMotivation" value="3" id="reward3">
+                        <label for="reward3">★</label>
+                        <input type="radio" name="rewardMotivation" value="2" id="reward2">
+                        <label for="reward2">★</label>
+                        <input type="radio" name="rewardMotivation" value="1" id="reward1">
+                        <label for="reward1">★</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>How likely would you recommend Drift to your friends?</label>
+                    <div class="scale-10">
+                        <div class="scale-labels">
+                            <span>Not likely</span>
+                            <span>Very likely</span>
+                        </div>
+                        <div class="scale-options">
+                            <label><input type="radio" name="recommend" value="1" required> 1</label>
+                            <label><input type="radio" name="recommend" value="2"> 2</label>
+                            <label><input type="radio" name="recommend" value="3"> 3</label>
+                            <label><input type="radio" name="recommend" value="4"> 4</label>
+                            <label><input type="radio" name="recommend" value="5"> 5</label>
+                            <label><input type="radio" name="recommend" value="6"> 6</label>
+                            <label><input type="radio" name="recommend" value="7"> 7</label>
+                            <label><input type="radio" name="recommend" value="8"> 8</label>
+                            <label><input type="radio" name="recommend" value="9"> 9</label>
+                            <label><input type="radio" name="recommend" value="10"> 10</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>What would make your campus experience better?</label>
+                    <textarea name="improvementIdeas" rows="3" placeholder="Share your thoughts..."></textarea>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Survey</button>
+        </form>
+
+        <div class="survey-footer">
+            <p>Thank you! Your feedback helps us create better connections for students like you.</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('studentSurvey').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Thank you for completing the survey! Your responses have been recorded.');
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drift Survey - Company Admins</title>
+    <link rel="stylesheet" href="../css/survey.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="survey-header">
+            <h1>Drift Market Research Survey - Company Administrators</h1>
+            <p class="survey-intro">Drift helps companies improve employee onboarding and connection. Pricing:
+                $3/user/month. We'd love your feedback!</p>
+        </div>
+
+        <form class="survey-form" id="companyAdminSurvey">
+            <div class="survey-section">
+                <h2>About Your Organization</h2>
+                <div class="form-group">
+                    <label>Company size</label>
+                    <select name="companySize" required>
+                        <option value="">Select size</option>
+                        <option value="1-50">1-50 employees</option>
+                        <option value="51-200">51-200 employees</option>
+                        <option value="201-1000">201-1,000 employees</option>
+                        <option value="1000+">1,000+ employees</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Percentage of international/remote employees from different regions?</label>
+                    <input type="range" name="internationalPercentage" min="0" max="100" value="25" class="slider"
+                        oninput="this.nextElementSibling.value = this.value + '%'">
+                    <output>25%</output>
+                </div>
+                <div class="form-group">
+                    <label>Which challenges does your organization face? (Select all that apply)</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="challenges" value="isolation">
+                            <span>Employee isolation</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="challenges" value="onboarding">
+                            <span>Onboarding difficulties</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="challenges" value="retention">
+                            <span>Employee retention</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="challenges" value="culture">
+                            <span>Building inclusive culture</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="challenges" value="productivity">
+                            <span>Low engagement/productivity</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>How much has employee isolation/adjustment issues impacted your organization financially
+                        (estimated revenue loss, productivity costs, etc.)?</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="financialImpact" value="significant" required>
+                            <span>Significant financial impact</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="financialImpact" value="moderate">
+                            <span>Moderate impact</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="financialImpact" value="minimal">
+                            <span>Minimal impact</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="financialImpact" value="none">
+                            <span>No impact</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="financialImpact" value="unknown">
+                            <span>Don't know/Not measured</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="survey-section">
+                <h2>Interest in Drift Features</h2>
+                <div class="form-group">
+                    <label>How interested would you be in a platform that helps employees connect with others from their
+                        hometown/country or with similar backgrounds?</label>
+                    <div class="rating-stars">
+                        <input type="radio" name="hometownInterest" value="5" id="home5" required>
+                        <label for="home5">★</label>
+                        <input type="radio" name="hometownInterest" value="4" id="home4">
+                        <label for="home4">★</label>
+                        <input type="radio" name="hometownInterest" value="3" id="home3">
+                        <label for="home3">★</label>
+                        <input type="radio" name="hometownInterest" value="2" id="home2">
+                        <label for="home2">★</label>
+                        <input type="radio" name="hometownInterest" value="1" id="home1">
+                        <label for="home1">★</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Rate your interest in these Drift features (1 = Not interested, 5 = Very interested)</label>
+                    <div class="rating-grid">
+                        <div class="rating-row">
+                            <span class="rating-label">Surf AI assistant for employee connections</span>
+                            <div class="rating-scale">
+                                <label><input type="radio" name="feature-surfai" value="1" required> 1</label>
+                                <label><input type="radio" name="feature-surfai" value="2"> 2</label>
+                                <label><input type="radio" name="feature-surfai" value="3"> 3</label>
+                                <label><input type="radio" name="feature-surfai" value="4"> 4</label>
+                                <label><input type="radio" name="feature-surfai" value="5"> 5</label>
+                            </div>
+                        </div>
+                        <div class="rating-row">
+                            <span class="rating-label">Proximity-based employee connections</span>
+                            <div class="rating-scale">
+                                <label><input type="radio" name="feature-proximity" value="1" required> 1</label>
+                                <label><input type="radio" name="feature-proximity" value="2"> 2</label>
+                                <label><input type="radio" name="feature-proximity" value="3"> 3</label>
+                                <label><input type="radio" name="feature-proximity" value="4"> 4</label>
+                                <label><input type="radio" name="feature-proximity" value="5"> 5</label>
+                            </div>
+                        </div>
+                        <div class="rating-row">
+                            <span class="rating-label">Employee support tracking & rewards</span>
+                            <div class="rating-scale">
+                                <label><input type="radio" name="feature-tracking" value="1" required> 1</label>
+                                <label><input type="radio" name="feature-tracking" value="2"> 2</label>
+                                <label><input type="radio" name="feature-tracking" value="3"> 3</label>
+                                <label><input type="radio" name="feature-tracking" value="4"> 4</label>
+                                <label><input type="radio" name="feature-tracking" value="5"> 5</label>
+                            </div>
+                        </div>
+                        <div class="rating-row">
+                            <span class="rating-label">Management insights for promotions</span>
+                            <div class="rating-scale">
+                                <label><input type="radio" name="feature-insights" value="1" required> 1</label>
+                                <label><input type="radio" name="feature-insights" value="2"> 2</label>
+                                <label><input type="radio" name="feature-insights" value="3"> 3</label>
+                                <label><input type="radio" name="feature-insights" value="4"> 4</label>
+                                <label><input type="radio" name="feature-insights" value="5"> 5</label>
+                            </div>
+                        </div>
+                        <div class="rating-row">
+                            <span class="rating-label">Mini-Drifts for company events</span>
+                            <div class="rating-scale">
+                                <label><input type="radio" name="feature-mini" value="1" required> 1</label>
+                                <label><input type="radio" name="feature-mini" value="2"> 2</label>
+                                <label><input type="radio" name="feature-mini" value="3"> 3</label>
+                                <label><input type="radio" name="feature-mini" value="4"> 4</label>
+                                <label><input type="radio" name="feature-mini" value="5"> 5</label>
+                            </div>
+                        </div>
+                        <div class="rating-row">
+                            <span class="rating-label">Diversity groups & ERG support</span>
+                            <div class="rating-scale">
+                                <label><input type="radio" name="feature-diversity" value="1" required> 1</label>
+                                <label><input type="radio" name="feature-diversity" value="2"> 2</label>
+                                <label><input type="radio" name="feature-diversity" value="3"> 3</label>
+                                <label><input type="radio" name="feature-diversity" value="4"> 4</label>
+                                <label><input type="radio" name="feature-diversity" value="5"> 5</label>
+                            </div>
+                        </div>
+                        <div class="rating-row">
+                            <span class="rating-label">Community features: Posts, comments, stories for genuine
+                                relationships</span>
+                            <div class="rating-scale">
+                                <label><input type="radio" name="feature-community" value="1" required> 1</label>
+                                <label><input type="radio" name="feature-community" value="2"> 2</label>
+                                <label><input type="radio" name="feature-community" value="3"> 3</label>
+                                <label><input type="radio" name="feature-community" value="4"> 4</label>
+                                <label><input type="radio" name="feature-community" value="5"> 5</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>How valuable would it be to have insights about which employees actively mentor and support
+                        new team members (for use in raises/promotions)?</label>
+                    <select name="insightsValue" required>
+                        <option value="">Select an option</option>
+                        <option value="extremely">Extremely valuable - Game changer</option>
+                        <option value="very">Very valuable</option>
+                        <option value="somewhat">Somewhat valuable</option>
+                        <option value="slightly">Slightly valuable</option>
+                        <option value="not">Not valuable</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>If Drift reduces employee adjustment time by 40%, how impactful would that be?</label>
+                    <div class="rating-stars">
+                        <input type="radio" name="impactRating" value="5" id="impact5" required>
+                        <label for="impact5">★</label>
+                        <input type="radio" name="impactRating" value="4" id="impact4">
+                        <label for="impact4">★</label>
+                        <input type="radio" name="impactRating" value="3" id="impact3">
+                        <label for="impact3">★</label>
+                        <input type="radio" name="impactRating" value="2" id="impact2">
+                        <label for="impact2">★</label>
+                        <input type="radio" name="impactRating" value="1" id="impact1">
+                        <label for="impact1">★</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>How important is it for your organization to improve employee retention and reduce
+                        isolation?</label>
+                    <input type="range" name="retentionImportance" min="0" max="100" value="75" class="slider"
+                        oninput="this.nextElementSibling.value = this.value + '%'">
+                    <output>75%</output>
+                </div>
+            </div>
+
+            <div class="survey-section">
+                <h2>Pricing & Implementation</h2>
+                <div class="form-group">
+                    <label>Drift is offered at $3/user/month for companies. How reasonable is this pricing for your
+                        organization?</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="pricingOpinion" value="very-reasonable" required>
+                            <span>Very reasonable - Would definitely consider</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="pricingOpinion" value="reasonable">
+                            <span>Reasonable</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="pricingOpinion" value="fair">
+                            <span>Fair - Would need to see more ROI data</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="pricingOpinion" value="expensive">
+                            <span>Expensive - Would be difficult to justify</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="pricingOpinion" value="too-expensive">
+                            <span>Too expensive - Not feasible</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>At $3/user/month, how likely would your organization be to adopt Drift?</label>
+                    <div class="nps-scale">
+                        <div class="nps-labels">
+                            <span>Not at all likely</span>
+                            <span>Extremely likely</span>
+                        </div>
+                        <div class="nps-options">
+                            <label><input type="radio" name="adoptionLikelihood" value="0" required> 0</label>
+                            <label><input type="radio" name="adoptionLikelihood" value="1"> 1</label>
+                            <label><input type="radio" name="adoptionLikelihood" value="2"> 2</label>
+                            <label><input type="radio" name="adoptionLikelihood" value="3"> 3</label>
+                            <label><input type="radio" name="adoptionLikelihood" value="4"> 4</label>
+                            <label><input type="radio" name="adoptionLikelihood" value="5"> 5</label>
+                            <label><input type="radio" name="adoptionLikelihood" value="6"> 6</label>
+                            <label><input type="radio" name="adoptionLikelihood" value="7"> 7</label>
+                            <label><input type="radio" name="adoptionLikelihood" value="8"> 8</label>
+                            <label><input type="radio" name="adoptionLikelihood" value="9"> 9</label>
+                            <label><input type="radio" name="adoptionLikelihood" value="10"> 10</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>What would be the biggest barrier to adopting Drift at your organization?</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="barriers" value="budget">
+                            <span>Budget/Cost</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="barriers" value="priority">
+                            <span>Not a current priority</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="barriers" value="proof">
+                            <span>Need more proof of ROI</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="barriers" value="adoption">
+                            <span>Employee adoption concerns</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="barriers" value="privacy">
+                            <span>Privacy/security concerns</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="barriers" value="integration">
+                            <span>Technical integration challenges</span>
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="barriers" value="none">
+                            <span>No significant barriers</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Implementation timeframe?</label>
+                    <select name="timeframe" required>
+                        <option value="">Select timeframe</option>
+                        <option value="immediate">Within 1 month</option>
+                        <option value="short">1-3 months</option>
+                        <option value="medium">3-6 months</option>
+                        <option value="long">6-12 months</option>
+                        <option value="future">Future consideration</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="survey-section">
+                <h2>Final Thoughts</h2>
+                <div class="form-group">
+                    <label>How likely are you to recommend Drift to other companies?</label>
+                    <div class="nps-scale">
+                        <div class="nps-labels">
+                            <span>Not likely</span>
+                            <span>Very likely</span>
+                        </div>
+                        <div class="nps-options">
+                            <label><input type="radio" name="nps" value="0" required> 0</label>
+                            <label><input type="radio" name="nps" value="1"> 1</label>
+                            <label><input type="radio" name="nps" value="2"> 2</label>
+                            <label><input type="radio" name="nps" value="3"> 3</label>
+                            <label><input type="radio" name="nps" value="4"> 4</label>
+                            <label><input type="radio" name="nps" value="5"> 5</label>
+                            <label><input type="radio" name="nps" value="6"> 6</label>
+                            <label><input type="radio" name="nps" value="7"> 7</label>
+                            <label><input type="radio" name="nps" value="8"> 8</label>
+                            <label><input type="radio" name="nps" value="9"> 9</label>
+                            <label><input type="radio" name="nps" value="10"> 10</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Additional feedback or questions?</label>
+                    <textarea name="feedback" rows="3" placeholder="Share your thoughts..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Interested in a pilot program?</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="pilotInterest" value="yes" required>
+                            <span>Yes, contact me</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="pilotInterest" value="maybe">
+                            <span>Maybe, send more info</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="pilotInterest" value="no">
+                            <span>No thanks</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Survey</button>
+        </form>
+
+        <div class="survey-footer">
+            <p>Thank you for your time! Your feedback helps us help employees feel at home.</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('companyAdminSurvey').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Thank you for completing the survey!');
+        });
+    </script>
+</body>
+
+</html>
